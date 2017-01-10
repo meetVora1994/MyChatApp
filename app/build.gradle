@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "app.chat.meet.mychatapp"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+
+    //===========================XMPP==================================
+    // Optional for XMPPTCPConnection
+    compile "org.igniterealtime.smack:smack-android:4.1.0"
+    compile "org.igniterealtime.smack:smack-tcp:4.1.0"
+
+    // For XMPP extensions support like Registering the user
+    compile "org.igniterealtime.smack:smack-extensions:4.1.0"
+
+    // Optional for XMPP-IM (RFC 6121) support (Roster, Threaded Chats, …)
+    // compile "org.igniterealtime.smack:smack-im:4.1.0"
+    //=================================================================
+
+    //==========================FIREBASE===============================
+    // Provides Analytics
+    compile 'com.google.firebase:firebase-core:9.0.0'
+    // Firebase Cloud Messaging - FCM
+    compile 'com.google.firebase:firebase-messaging:9.0.0'
+    //=================================================================
+
+    // Google's Java serialization/deserialization library that can convert Java Objects into JSON and back.
+    compile 'com.google.code.gson:gson:2.6.2'
+}
+
+// Firebase plugin
+apply plugin: 'com.google.gms.google-services'

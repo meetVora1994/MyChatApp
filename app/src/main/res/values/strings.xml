@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Chat App</string>
+
+    <!-- ActivityHeaders -->
+    <string name="header_sign_in">Sign In</string>
+
+
+    <!-- LoginActivity -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_up">Not having an account? Register</string>
+    <string name="error_field_required">This field is required</string>
+
+    <!-- RegistrationActivity -->
+    <string name="action_register">Register</string>
+    <string name="prompt_first_name">First Name</string>
+    <string name="prompt_last_name">Last Name</string>
+    <string name="title_activity_roster">RosterActivity</string>
+</resources>
